@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    flex-flow: column;
+    font-size: 16px;
+}
+
+.header {
+    outline: 1px solid gold;
+    height: 3rem;
+}
+
+.header__menu {
+    display: flex;
+}
+
+.header__menu--item {
+    list-style: none;
+    flex: 1;
+        /* Entre lineas de la lista ocupan todo el ancho disponible */
+    outline: 1px solid cyan;
+    line-height: 3rem;
+        /* Alinea los elementos al centro de la anchura
+        Solo sirve cuando se trata de una línea */
+    text-align: center;
+        /* Alinea los elementos al centro de la longitud */
+    transition: flex .5s;
+        /* Va a tener una trasición de 5 segundos sobre la propiedad flex*/
+}
+
+.header__menu--item:hover {
+    flex: 8;        /* Hacer enfasis a ese item del menu */
+}
+
+.container {
+    display: flex;
+    height: inherit;    /* Para que herede de su padre la altura */
+}
+
+.container__content {
+    outline: 1px solid cyan;
+    flex: 1;
+}
+
+.container__aside {
+    outline: 1px solid magenta;
+    flex: 0 0 25%;
+        /* Primer valor indica el crecimiento
+        Segundo valor indica la reducción
+        Tercer valor indica el tamaño */
+}
+
+.footer {
+    outline: 1px solid salmon;
+        /* Borde que se dibuja por fuera del elemento pero sin
+        ocupar espacio y el border si ocupa el espacio */
+    height: 6rem;
+    margin-top: auto;       /* Para mandar al footer hasta abajo */
+}
